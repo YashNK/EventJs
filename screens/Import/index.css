@@ -1,0 +1,294 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.index-main-container{
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+
+.index-header{
+    position: relative;
+    background-color: white;
+    box-shadow: 0px 0px 10px 1.5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.logo-container{
+    display: inline-block;
+}
+
+.logo{
+    vertical-align: middle;
+    padding: 10px 0px 10px 15px;
+    width: 50px;
+}
+
+.header-title{
+    cursor: pointer;
+    padding-left: 20px;
+    font-size: large;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0;
+}
+
+.about-us-btn{
+    cursor: pointer;
+    font-size: medium;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 100px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 3px;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0px 10px 0px 10px;
+    transition: 0.3s;
+}
+
+.about-us-btn:hover{
+    font-size: large;
+    background-color: rgb(247, 40, 40);
+    color: white;
+}
+
+.header-links{
+    text-align: right;
+    display: inline-block;
+    width: calc(100% - 300px);
+}
+
+.index-content{
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(249, 245, 241);
+    min-height: calc(100% - 70px);
+    max-height: 100%;
+    width: 100%;
+}
+
+.info-container{
+    width: 40%;
+}
+
+.site-information{
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.csv-form{
+    margin: 20px 0px;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+}
+
+.selector-label{
+    margin: 0;
+    font-weight: 400;
+    font-size: small;
+    padding-bottom: 10px;
+}
+
+.csv-selector{
+    background-color: rgb(234, 82, 82);
+    padding: 10px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    margin-bottom: 20px;
+    color: white;
+    outline: none;
+    display: block;
+    border: none;
+    width: 100%;
+}
+
+.csv-selector>option{
+    display: block;
+    border-radius: 0;
+    background-color: rgb(252, 246, 246);
+    color: rgb(105, 67, 67);
+}
+
+.file-container{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-color: rgb(210, 222, 226);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px dotted rgb(0, 102, 255);
+    transition: 0.3s ease-in;
+}
+
+.file-reader{
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border: none;
+}
+
+.file-container:hover {
+    background-color: #b7d5e0;
+}
+
+.import-btn-label{
+    font-size: larger;
+    font-weight: 500;
+    top: calc(50% + 5px);
+    left: calc(50% - 48px);
+    position: absolute;
+    transition: 0.3s;
+}
+
+.import-btn-label-selected{
+    font-size: larger;
+    font-weight: 500;
+    top: calc(50% + 5px);
+    left: calc(50% - 95px);
+    position: absolute;
+    transition: 0.3s ease-in;
+}
+
+.import-img{
+    top: calc(50% - 35px);
+    left: calc(50% - 23px);
+    position: absolute;
+}
+
+.import-btn{
+    width: 100%;
+    border-radius: 3px;
+    padding: 10px 40px 10px 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    background: linear-gradient(to left, rgb(241, 238, 238) 50%, rgb(223, 85, 85) 50%) right;
+    background-size: 200%;
+    transition: .3s ease-in-out;
+}
+
+.import-btn:hover{
+    background-position: left;
+    color: white;
+}
+
+.event-list-btn, .event-list-btn-disabled{
+    padding: 10px 25px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    border-radius: 3px;
+    border: none;
+    transition: 0.3s;
+}
+
+.event-list-btn-disabled{
+    cursor: not-allowed;
+    opacity: 30%;
+}
+
+.event-list-btn:hover{
+    background-color: rgb(223, 85, 85);
+    color: white;
+}
+
+.popup-container, .popup-container-success {
+    position: fixed;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffe9e9; 
+    border: 2px solid red;
+    color: rgb(131, 83, 83);
+    border-radius: 5px;
+    width: 0px;
+    max-width: 350px;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: top 0.5s ease;
+}
+
+.popup-container-success {
+    color: rgb(84, 109, 66);
+    background: #ddf3de;
+    border: 2px solid rgb(47, 255, 0);
+}
+
+.popup-container.expand, .popup-container-success.expand {
+    width: 350px;
+    transition: width 0.7s ease;
+}
+
+.popup-container.contract, .popup-container-success.contract {
+    width: 0px;
+    transition: width 0.5s ease;
+}
+
+.popup-text{
+    display: inline-block;
+}
+
+.popup-title {
+    margin: 0px 0px 0px 10px;
+    font-size: small;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.popup-message {
+    margin: 0px 0px 0px 10px;
+    font-size: medium;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.popup-close-btn{
+    opacity: 0;
+    left: calc(100% - 38px);
+    top: calc(100% - 45px);
+    position: absolute;
+    transition: 0.3s ease-in;
+}
+
+@media (max-width: 850px) {
+    .index-content{
+        overflow: auto;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .info-container{
+        margin: 20px 0px;
+        width: auto;
+        padding: 40px;
+    }
+    .csv-form{
+        width: 70%;
+        margin: 20px 0px 40px 0px;
+    }
+    .file-container{
+        width: 100%;
+    }
+}

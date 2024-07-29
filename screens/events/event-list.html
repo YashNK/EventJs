@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Manager Pro</title>
+    <link rel="icon" href="../../assets/browser-logo.png">
+    <link rel="stylesheet" href="event-list.css">
+</head>
+<body onload="contentLoad()">
+    <div class="events-main-conatiner">
+        <div class="events-header">
+            <div class="logo-container" onclick='confirmReturn()'>
+                <img class="logo" title="YK" src="../../assets/logo.png">
+                <h1 class="header-title">Event Manager Pro</h2>
+            </div>
+            <div onclick="confirmReturn()" class="header-links">
+                <a class="header-btn">Import CSV</a>
+            </div>
+        </div>
+        <div class="events-content">
+            <div class="sidebar">
+                <div onclick='navigate("./event-list.html")' class="sidebar-link-container">
+                    <img class="link-img" src="../../assets/list.png">
+                    <button class="sidebar-btn">Event List</button>
+                </div>
+                <div onclick='navigate("../tasks/task-list.html")' class="sidebar-link-container">
+                    <img class="link-img" src="../../assets/tasks.png">
+                    <button class="sidebar-btn">Task List</button>
+                </div>
+            </div>
+            <div class="table-container">
+                <table id="eventsTable">
+                    <thead>
+                        <tr>
+                            <th class="table-header">Event ID</th>
+                            <th class="table-header">Event Name</th>
+                            <th class="table-header">Start Date</th>
+                            <th class="table-header">End Date</th>
+                            <th class="table-header">Status</th>
+                            <th class="action-header">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="eventsTableBody">
+                        <!-- Rows will be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="confirmation-pop-up-container" id="confirmationPopUpContainer">
+            <div class="confirmation-pop-up-content">
+                <h1>Are you sure you wanna go back to IMPORT SCREEN?</h1>
+                <h4>All Current Data Will Be Lost Forever.</h4>
+                <button class="pop-up-confirm-btn" onclick='navigateToImportScreen()'>Yes</button>
+                <button class="pop-up-deny-btn" onclick="closeConfirmPopUp()">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="EventList.js"></script>
+</body>
+</html>

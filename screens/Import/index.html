@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Manager Pro</title>
+    <link rel="icon" href="../../assets/browser-logo.png">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body onload="contentLoad()">
+    <div class="index-main-container">
+        <div class="index-header">
+            <div class="logo-container">
+                <img class="logo" title="YK" src="../../assets/logo.png">
+                <h1 class="header-title">Event Manager Pro</h2>
+            </div>
+            <div class="header-links">
+                <h2 class="about-us-btn">About us</h2>
+            </div>
+        </div>
+        <div class="index-content">
+            <div class="info-container">
+                <h2>Event Manager Pro</h2>
+                <p class="site-information">
+                    Welcome to EventManager Pro! Our platform is designed to make managing events and tasks effortless. With EventManager Pro, you can easily create, edit, and track events, set dates, and view upcoming activities at a glance. Organize tasks associated with each event by assigning, monitoring, and updating them to ensure nothing is overlooked. Our user-friendly interface and seamless integration streamline your workflow, whether you’re planning a small gathering or a large conference. Stay informed with real-time updates and notifications to keep you in the loop. Experience a new level of efficiency in event management with EventManager Pro—where your events and tasks are perfectly organized!
+                </p>
+            </div>
+            <form id="csvForm" class="csv-form">
+                <h2 for="csvSelector" class="selector-label">Please select the file you want to upload!</h2>
+                <select id="csvSelector" class="csv-selector">
+                    <option value="event">Event CSV</option>
+                    <option value="task">Task CSV</option>
+                </select>
+                <div class="file-container">
+                    <input class="file-reader" type="file" id="fileReader" accept=".csv">
+                    <h2 id="import-btn-label" class="import-btn-label">Import CSV</h2>
+                    <img src="../../assets/upload.png" class="import-img">
+                </div>
+                <button id="importBtn" class="import-btn" type="button">Import</button>
+                <button onclick='navigate("../events/event-list.html")' class="event-list-btn-disabled" id="viewEventListBtn">
+                    View Events List
+                </button>
+            </form>
+        </div>
+        <div class="popup-container" id="popupContainer">
+            <div class="popup-text">
+                <h2 class="popup-title" id="popupTitle">Title</h2>
+                <h2 class="popup-message" id="popupMessage">Message</h2>
+            </div>
+            <div class="popup-close-btn-container">
+                <img class="popup-close-btn" id="popupCloseBtn">
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

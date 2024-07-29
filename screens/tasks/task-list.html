@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="javascript">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Manager Pro</title>
+    <link rel="icon" href="../../assets/browser-logo.png">
+    <link rel="stylesheet" href="task-list.css">
+</head>
+<body onload="contentLoad()">
+    <div class="tasks-main-conatiner">
+        <div class="tasks-header">
+            <div class="logo-container" onclick='confirmReturn()'>
+                <img class="logo" title="YK" src="../../assets/logo.png">
+                <h1 class="header-title">Event Manager Pro</h2>
+            </div>
+            <div class="header-links" onclick="confirmReturn()">
+                <a class="header-btn">Import CSV</a>
+            </div>
+        </div>
+        <div class="tasks-content">
+            <div class="sidebar">
+                <div onclick='navigate("../events/event-list.html")' class="sidebar-link-container">
+                    <img class="link-img" src="../../assets/list.png">
+                    <button class="sidebar-btn">Event List</button>
+                </div>
+                <div onclick='navigate("./task-list.html")' class="sidebar-link-container">
+                    <img class="link-img" src="../../assets/tasks.png">
+                    <button class="sidebar-btn">Task List</button>
+                </div>
+            </div>
+            <div class="table-container">
+                <table id="tasksTable">
+                    <thead>
+                        <tr>
+                            <th>Event ID</th>
+                            <th>Event Name</th>
+                            <th>Task Name</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tasksTableBody">
+                        <!-- Rows will be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="confirmation-pop-up-container" id="confirmationPopUpContainer">
+            <div class="confirmation-pop-up-content">
+                <h1>Are you sure you wanna go back to IMPORT SCREEN?</h1>
+                <h4>All Current Data Will Be Lost Forever.</h4>
+                <button class="pop-up-confirm-btn" onclick='navigateToImportScreen()'>Yes</button>
+                <button class="pop-up-deny-btn" onclick="closeConfirmPopUp()">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="taskList.js"></script>
+</body>
+</html>

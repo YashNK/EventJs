@@ -1,0 +1,23 @@
+eventId,taskName
+1, Buy Colors
+1, Buy Water Guns
+2, Buy Candles
+2, Buy Crackers
+3, Buy Cake
+3, Buy Candles
+4, Buy Costume
+4, Fill Gas
+4, Save Money
+5, Buy Costume
+5, Fill Gas
+5, Save Money
+6, Buy Costume
+7, Buy Cake
+7, Buy Candles
+7, Buy Crackers
+8, Check Csv File Validations
+8, Check Event Status Updation
+8, Check Task Status Updation
+8, Check In Progress Status Updation
+8, Check Task Completed Status Updation
+8, Check Task Failed Status Updation
